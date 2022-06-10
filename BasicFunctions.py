@@ -4,6 +4,7 @@ BasicFuntions.help() - Print library info in the console!"""
 
 
 import os,sys,random,json;from os import system;from getpass import getpass
+versionInfo = "Version 0.5.0[5/26/2022]"
 clsenable = True
 
 class ansi:
@@ -277,7 +278,7 @@ def help(function="help"):
     """
     cls()
     if function=="help":
-        print(f"{ansi.italics}{ansi.blue}Basic Functions{ansi.standard}{ansi.white}(Version 0.5.0[5/26/2022])\n"
+        print(f"{ansi.italics}{ansi.blue}Basic Functions{ansi.standard}{ansi.white}({versionInfo})\n"
         f"Created by: {ansi.green}Nomster Dude{ansi.white}\n"
         f"Supports: Windows, MacOS, and Linux\n"
         "Requires: Python 3.0+\n"
@@ -456,7 +457,7 @@ def help(function="help"):
         'Output(Variable):\n'
         'Output(Console):')
     else:
-        print(f"{ansi.italics}{ansi.blue}Basic Functions{ansi.standard}{ansi.white}(Version 0.5.0[5/2/2022])\n"
+        print(f"{ansi.italics}{ansi.blue}Basic Functions{ansi.standard}{ansi.white}({versionInfo})\n"
         f"Created by: {ansi.green}Nomster Dude{ansi.white}\n"
         f"Supports: Windows, MacOS, and Linux\n"
         "Requires: Python 3.0+\n"
