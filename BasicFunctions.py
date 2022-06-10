@@ -1,4 +1,4 @@
-"""Commonly used functions compiled into one moudle to help keep your code organized
+"""Commonly used functions compiled into one module to help keep your code organized
 
 BasicFuntions.help() - Print module info and a list of functions in the console!"""
 
