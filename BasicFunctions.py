@@ -4,7 +4,7 @@ BasicFuntions.help() - Print library info in the console!"""
 
 
 import os,sys,random,json;from os import system;from getpass import getpass
-versionInfo = "Version 0.5.0[5/26/2022]"
+versionInfo = "Version 0.5.5[6/10/2022]"
 clsenable = True
 
 class ansi:
