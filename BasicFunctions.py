@@ -30,7 +30,7 @@ class ansi:
     dim = "\033[2m"
     italics = "\033[3m"
     underline = "\033[4m"
-    #Standard Text Escape Code(White with no text formatting.)
+    #Standard Text Escape Code(Default color with no text formatting.)
     #\033[0;37;48m
 
 if os.name == "nt":#Defines Windows version of function.
@@ -57,7 +57,7 @@ def clstoggle(input=True):
         clsenable = input
     else:
         clsenable = True
-def pause(message=f"Press [{ansi.blue}Enter{ansi.white}] to continue..."):
+def pause(message=f"Press [{ansi.blue}Enter{ansi.standard}] to continue..."):
     """Pause the console until the user presses [Enter]
 
     Args:
@@ -278,40 +278,40 @@ def help(function="help"):
     """
     cls()
     if function=="help":
-        print(f"{ansi.italics}{ansi.blue}Basic Functions{ansi.standard}{ansi.white}({versionInfo})\n"
-        f"Created by: {ansi.green}Nomster Dude{ansi.white}\n"
+        print(f"{ansi.italics}{ansi.blue}Basic Functions{ansi.standard}{ansi.standard}({versionInfo})\n"
+        f"Created by: {ansi.green}Nomster Dude{ansi.standard}\n"
         f"Supports: Windows, MacOS, and Linux\n"
         "Requires: Python 3.0+\n"
         '\n'
         'Functions:\n'
-        f'{ansi.purple}cls{ansi.white}({ansi.blue}{ansi.white})                     - Clear the console\n'
-        f'{ansi.purple}clstoggle{ansi.white}({ansi.blue}"on/off"{ansi.white})       - Enable/disable the cls() function\n'
-        f'{ansi.purple}pause{ansi.white}({ansi.blue}{ansi.white})                   - Pause the program until the user presses [Enter] in the console\n'
-        f'{ansi.purple}getch{ansi.white}(prompt)             - Returns the key pressed by the user\n'
-        f'{ansi.purple}randomselect{ansi.white}(var)         - Returns a random selection from a given list, tuple, string or other iterable\n'
-        f'{ansi.purple}save{ansi.white}(file_name, var_data) - Writes data to a json(.json) file\n'
-        f'{ansi.purple}load{ansi.white}(file_name)           - Returns data from a json(.json) file\n'
-        f'{ansi.purple}textcolor{ansi.white}({ansi.blue}"color"{ansi.white})        - Change the color of text printed in the console\n'
-        f'{ansi.purple}debugerror{ansi.white}({ansi.blue}"error"{ansi.white})       - Convert error messages to laymans terms\n'
-        f'{ansi.purple}comingsoon{ansi.white}({ansi.blue}{ansi.white})              - Display a "Coming Soon" message to the user in the console\n'
-        f'{ansi.purple}help{ansi.white}({ansi.blue}"function_name"{ansi.white})     - Function argument is optional(also accepts classes), describes how to use a function(s)'
+        f'{ansi.purple}cls{ansi.standard}({ansi.blue}{ansi.standard})                     - Clear the console\n'
+        f'{ansi.purple}clstoggle{ansi.standard}({ansi.blue}"on/off"{ansi.standard})       - Enable/disable the cls() function\n'
+        f'{ansi.purple}pause{ansi.standard}({ansi.blue}{ansi.standard})                   - Pause the program until the user presses [Enter] in the console\n'
+        f'{ansi.purple}getch{ansi.standard}(prompt)             - Returns the key pressed by the user\n'
+        f'{ansi.purple}randomselect{ansi.standard}(var)         - Returns a random selection from a given list, tuple, string or other iterable\n'
+        f'{ansi.purple}save{ansi.standard}(file_name, var_data) - Writes data to a json(.json) file\n'
+        f'{ansi.purple}load{ansi.standard}(file_name)           - Returns data from a json(.json) file\n'
+        f'{ansi.purple}textcolor{ansi.standard}({ansi.blue}"color"{ansi.standard})        - Change the color of text printed in the console\n'
+        f'{ansi.purple}debugerror{ansi.standard}({ansi.blue}"error"{ansi.standard})       - Convert error messages to laymans terms\n'
+        f'{ansi.purple}comingsoon{ansi.standard}({ansi.blue}{ansi.standard})              - Display a "Coming Soon" message to the user in the console\n'
+        f'{ansi.purple}help{ansi.standard}({ansi.blue}"function_name"{ansi.standard})     - Function argument is optional(also accepts classes), describes how to use a function(s)'
         '\n'
         'Classes:\n'
-        f'{ansi.yellow}ansi{ansi.white}                     - Includes ansi escape sequences for colors and text formatting')
+        f'{ansi.yellow}ansi{ansi.standard}                     - Includes ansi escape sequences for colors and text formatting')
         
     elif function=="cls":
         print("Explanation: Used to clear the console.\n"
         "\n"
         "Input:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}cls{ansi.white}()\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}cls{ansi.standard}()\n'
         "\n"
         'Output(Variable): No output.\n'
         'Output(Console): Clears console.')
     elif function=="clstoggle":
-        print(f"Explanation: Disables the {ansi.purple}cls{ansi.white}() function to stop the console from clearing when you run functions like help() and comingsoon().\n"
+        print(f"Explanation: Disables the {ansi.purple}cls{ansi.standard}() function to stop the console from clearing when you run functions like help() and comingsoon().\n"
         "\n"
         "Input:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}clstoggle{ansi.white}({ansi.blue}"on or off"{ansi.white})\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}clstoggle{ansi.standard}({ansi.blue}"on or off"{ansi.wstandardhite})\n'
         "\n"
         'Output(Variable): Sets clsenable to "0" or "1" within the BasicFunctions library(Does not effect your scripts variables).\n'
         'Output(Console): No output.')
@@ -319,7 +319,7 @@ def help(function="help"):
         print("Explanation: Pauses the console until the user presses [Enter].\n"
         "\n"
         "Input:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}pause{ansi.white}({ansi.blue}"message"{ansi.white})\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}pause{ansi.standard}({ansi.blue}"message"{ansi.standard})\n'
         "\n"
         'Output(Variable): No output.\n'
         'Output(Console): Prints "Press [Enter] to continue..." to the console. or a custom message.')
@@ -327,12 +327,12 @@ def help(function="help"):
         print("Explanation: Pause the script until a key is pressed by the user.\n"
         "\n"
         "Input:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}getch{ansi.white}()\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}getch{ansi.standard}()\n'
         "\n"
         "Example:\n"
-        f'your_variable {ansi.red}= {ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}getch{ansi.white}({ansi.blue}"What is your favorite letter: "{ansi.white})\n'
-        f'{ansi.red}if{ansi.white} your_variable {ansi.red}== {ansi.blue}"x"{ansi.white}\n'
-        f'  {ansi.purple}print{ansi.white}(your_variable)\n'
+        f'your_variable {ansi.red}= {ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}getch{ansi.standard}({ansi.blue}"What is your favorite letter: "{ansi.standard})\n'
+        f'{ansi.red}if{ansi.standard} your_variable {ansi.red}== {ansi.blue}"x"{ansi.standard}\n'
+        f'  {ansi.purple}print{ansi.standard}(your_variable)\n'
         "\n"
         "Example Output if you press [x](Console):\n"
         f'What is your favorite letter: \n'
@@ -344,11 +344,11 @@ def help(function="help"):
         print("Explanation: Returns a random selection from a given list, tuple, string or other iterable\n"
         "\n"
         "Input:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}randomselect{ansi.white}(var)\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}randomselect{ansi.standard}(var)\n'
         "\n"
         "Example:\n"
-        f'var {ansi.red}={ansi.white}[{ansi.blue}"1"{ansi.white},{ansi.blue}"2"{ansi.white},{ansi.blue}"3"{ansi.white}]\n'
-        f'{ansi.purple}print{ansi.white}({ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}randomselect{ansi.white}(var))\n'
+        f'var {ansi.red}={ansi.standard}[{ansi.blue}"1"{ansi.standard},{ansi.blue}"2"{ansi.standard},{ansi.blue}"3"{ansi.white}]\n'
+        f'{ansi.purple}print{ansi.standard}({ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}randomselect{ansi.standard}(var))\n'
         "\n"
         "Example Output(Console):\n"
         f'3\n'
@@ -361,10 +361,10 @@ def help(function="help"):
         'Unless another path is specified via the argument "file_path"\n'
         "\n"
         "Input:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}save{ansi.white}({ansi.blue}"file_name", "var_data"{ansi.white})\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}save{ansi.standard}({ansi.blue}"file_name", "var_data"{ansi.standard})\n'
         "\n"
         "Example:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}save{ansi.white}({ansi.blue}"file_name_example", "Hello World!"{ansi.white})\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}save{ansi.standard}({ansi.blue}"file_name_example", "Hello World!"{ansi.standard})\n'
         "\n"
         "Example Output(./Save Data/file_name_example.json):\n"
         f'"Hello World!"\n'
@@ -375,11 +375,11 @@ def help(function="help"):
         print("Explanation: Returns data from a json(.json) file\n"
         "\n"
         "Input:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}load{ansi.white}({ansi.blue}"file_name"{ansi.white})\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}load{ansi.standard}({ansi.blue}"file_name"{ansi.standard})\n'
         "\n"
         "Example:\n"
-        f'variable {ansi.red}= {ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}load{ansi.white}({ansi.blue}"file_name_example"{ansi.white})\n'
-        f'{ansi.purple}print{ansi.white}(variable)\n'
+        f'variable {ansi.red}= {ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}load{ansi.standard}({ansi.blue}"file_name_example"{ansi.standard})\n'
+        f'{ansi.purple}print{ansi.standard}(variable)\n'
         "\n"
         "Example Output(Console):\n"
         f'Hello World!\n'
@@ -390,14 +390,14 @@ def help(function="help"):
         print("Explanation: Change the color of text printed after the function is called.\n"
         "\n"
         "Input:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}textcolor{ansi.white}({ansi.blue}"color"{ansi.white})\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}textcolor{ansi.standard}({ansi.blue}"color"{ansi.standard})\n'
         "\n"
         "Example:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}textcolor{ansi.white}({ansi.blue}"green"{ansi.white})\n'
-        f'{ansi.purple}print{ansi.white}({ansi.blue}"Hello World!"{ansi.white})\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}textcolor{ansi.standard}({ansi.blue}"green"{ansi.standard})\n'
+        f'{ansi.purple}print{ansi.standard}({ansi.blue}"Hello World!"{ansi.standard})\n'
         "\n"
         "Example Output(Console):\n"
-        f'{ansi.green}Hello World!{ansi.white}\n'
+        f'{ansi.green}Hello World!{ansi.standard}\n'
         "\n"
         'Output(Variable): No output.\n'
         'Output(Console): Changes color of printed text until it is changed again.')
@@ -405,13 +405,13 @@ def help(function="help"):
         print("Explanation: Prints error info in the console in laymans terms.\n"
         "\n"
         "Input:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}debugerror{ansi.white}({ansi.blue}"error"{ansi.white})\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}debugerror{ansi.standard}({ansi.blue}"error"{ansi.standard})\n'
         "\n"
         "Example:\n"
-        f'{ansi.red}try{ansi.white}:\n'
+        f'{ansi.red}try{ansi.standard}:\n'
         f'  Your_Code\n'
-        f'{ansi.red}except {ansi.yellow}BaseException {ansi.red}as {ansi.white}error:\n'
-        f'  {ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}debugerror{ansi.white}(error)\n'
+        f'{ansi.red}except {ansi.yellow}BaseException {ansi.red}as {ansi.standard}error:\n'
+        f'  {ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}debugerror{ansi.standard}(error)\n'
         "\n"
         "Example Output(Console):\n"
         'NameError:\n'
@@ -427,7 +427,7 @@ def help(function="help"):
         print('Explanation: Prints "Coming Soon!" in the console\n'
         "\n"
         "Input:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}comingsoon{ansi.white}()\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}comingsoon{ansi.standard}()\n'
         "\n"
         'Output(Variable): No output.\n'
         'Output(Console): Prints "Coming soon!" then pauses the console.')
@@ -449,7 +449,7 @@ def help(function="help"):
         print("Explanation:\n"
         "\n"
         "Input:\n"
-        f'{ansi.yellow}BasicFunctions{ansi.white}.{ansi.purple}function_name{ansi.white}({ansi.blue}{ansi.white})\n'
+        f'{ansi.yellow}BasicFunctions{ansi.standard}.{ansi.purple}function_name{ansi.standard}({ansi.blue}{ansi.standard})\n'
         "\n"
         "Example:\n"
         f'\n'
@@ -457,12 +457,12 @@ def help(function="help"):
         'Output(Variable):\n'
         'Output(Console):')
     else:
-        print(f"{ansi.italics}{ansi.blue}Basic Functions{ansi.standard}{ansi.white}({versionInfo})\n"
-        f"Created by: {ansi.green}Nomster Dude{ansi.white}\n"
+        print(f"{ansi.italics}{ansi.blue}Basic Functions{ansi.standard}{ansi.standard}({versionInfo})\n"
+        f"Created by: {ansi.green}Nomster Dude{ansi.standard}\n"
         f"Supports: Windows, MacOS, and Linux\n"
         "Requires: Python 3.0+\n"
         '\n'
-        f'{ansi.bold}{ansi.red}Function or Class "{function}" does not exist! Try again with an option below!{ansi.standard}{ansi.white}\n'
+        f'{ansi.bold}{ansi.red}Function or Class "{function}" does not exist! Try again with an option below!{ansi.standard}{ansi.standard}\n'
         'Functions:\n'
         'cls          - Clear the console\n'
         'clstoggle    - Enable/disable the cls() function\n'
